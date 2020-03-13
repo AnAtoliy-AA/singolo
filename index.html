@@ -12,12 +12,13 @@
     <div class="wrapper">
         <header class="header container">
             <h1 class="header__logo">Singolo<span class="header__logo-star">*</span></h1>
-            <nav class="navigation">
-                <a class="navigation__item navigation__item_selected" href="#">Home</a>
-                <a class="navigation__item" href="#">Services</a>
-                <a class="navigation__item" href="#">Portfolio</a>
-                <a class="navigation__item" href="#">About</a>
-                <a class="navigation__item" href="#">Contact</a>
+            <a name='navigation'></a>
+            <nav class="navigation" id="menu">
+                <a class="navigation__item" href="#navigation">Home</a>
+                <a class="navigation__item" href="#services">Services</a>
+                <a class="navigation__item" href="#portfolio">Portfolio</a>
+                <a class="navigation__item" href="#about">About</a>
+                <a class="navigation__item" href="#contact">Contact</a>
             </nav>
         </header>
         <main class="main">
@@ -48,6 +49,7 @@
                 </div>
             </div>
             <section class="services container">
+                <a name='services'></a>
                 <div class="services__container">
                     <div class="section__description">
                         <h2 class="description__name">Our Services</h2>
@@ -144,6 +146,7 @@
                 </div>
             </section>
             <section class="portfolio container">
+                <a name='portfolio'></a>
                 <div class="section__description">
                     <h2 class="description__name">Portfolio</h2>
                     <p class="description__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
@@ -179,6 +182,7 @@
                 </div>
             </section>
             <section class="about-us">
+                <a name='about'></a>
                 <div class="section__description">
                     <h2 class="description__name">About us</h2>
                     <p class="description__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -236,6 +240,7 @@
                 </div>
             </section>
             <section class="quote container">
+                <a name='contact'></a>
                 <div class="section__description">
                     <h2 class="description__name colored">Get a Quote</h2>
                     <p class="description__text colored">Fusce dapibus, tellus ac cursus commodo, tortor mauris
@@ -288,6 +293,7 @@
             </footer>
         </main>
     </div>
+    <script src="script.js"></script>
 </body>
 
 </html>
