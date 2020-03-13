@@ -250,15 +250,23 @@
                         dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
                 <div class="contact">
-                    <form class="contact__form">
-                        <input type="text" class="contact__input" pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$"
+                    <form id="form" class="contact__form">
+                        <input type="text" id="subject" class="contact__input" pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$"
                             required placeholder="Name (Required)">
                         <input type="email" class="contact__input" required placeholder="Email (Required)">
                         <input type="text" class="contact__input" placeholder="Subject">
                         <textarea class="contact__input input_changed"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button class="button button__selected">Submit</button>
+                        <button id="btn" class="button button__selected">Submit</button>
                     </form>
+                    <div id="message-block" class="hiden">
+                        <div id="message" class="hiden">
+                           <p>Text: <span id="result"></span></p>
+                            <br>
+                            <button id="close-btn" >OK</button>
+                        </div>
+                        
+                    </div>
                     <div class="contact__info colored">
                         <h3 class="contact__name">contact information</h3>
                         <p class="contact__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
