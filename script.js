@@ -13,8 +13,6 @@ const navbarLinks = document.querySelectorAll('#navbar a');
 const iphoneScreenIsON = document.querySelector('.iphone__layer');
 const iphoneScreenIsOFF = document.querySelector('.iphone__layer>img');
 const portfolioPictures = document.querySelector('.portfolio__pictures');
-const submitButton = document.getElementById('btn');
-const closeButton = document.getElementById('close-btn');
 
 
 // NAVBAR
@@ -105,36 +103,49 @@ portfolioPictures.addEventListener('click', (event) => {
 function submitForm(event) {
   event.preventDefault();
 }*/
-const quote_name = document.getElementById('quote_name').value.toString();
-const quote_email = document.getElementById('quote_email').value.toString();
-const subject = document.getElementById('subject').value.toString();
-const describe = document.getElementById('describe').value.toString();
+
+
+const submitButton = document.getElementById('btn');
+
+const contactForm = document.getElementById('contact-form');
+const messageName = document.getElementById('message-name');
 const message_block = document.getElementById('message-block');
+const formResultSubject = document.getElementById('result-subject');
+const formResultDescribe = document.getElementById('result-describe');
+const closeButton = document.getElementById('close-btn');
+
 submitButton.addEventListener('click', () => {
-  message_block.classList.remove('hiden');
+  event.preventDefault();
+  message_block.classList.remove('hidden');
+  const quote_name = document.getElementById('quote_name').value.toString();
+  const quote_email = document.getElementById('quote_email').value.toString();
+  const subject = document.getElementById('subject').value.toString();
+  const describe = document.getElementById('describe').value.toString();
 
-  if ((quote_name.length == 0) || (quote_email.length == 0)) {
-    document.getElementById('message-name').innerText = ('PLEASE ENTER REQUIRED INFORMATION');
+  if ((quote_name.length === 0) || (quote_email.length === 0)) {
+    messageName.innerText = ('PLEASE ENTER REQUIRED INFORMATION');
   }
-  else document.getElementById('message-name').innerText = ('The letter was sent');
-  if (subject.length == 0) {
+  else {
+    messageName.innerText = ('The letter was sent');
+  }
+  if (subject.length === 0) {
+    formResultSubject.innerText = ('Without topic');
+  }
+  else {
+    formResultSubject.innerText = ('Topic:' + subject);
+  }
 
-    document.getElementById('result1').innerText = ('Without topic');
+  if (describe.length === 0) {
+    formResultDescribe.innerText = ('Without describe');
   }
-  else document.getElementById('result1').innerText = ('Topic:' + subject);
-  if (document.getElementById('describe').value.toString().length == 0) {
-    document.getElementById('result2').innerText = ('Without describe');
+  else {
+    formResultDescribe.innerText = ('Describe:' + describe);
   }
-  else document.getElementById('result2').innerText = ('Describe:' + describe);
-
 });
 
 closeButton.addEventListener('click', () => {
-  quote_name.innerText = '';
-  quote_email.innerText = '';
-  subject.innerText = '';
-  describe.innerText = '';
-  message_block.classList.add('hiden');
+  contactForm.reset();
+  message_block.classList.add('hidden');
 });
 
 

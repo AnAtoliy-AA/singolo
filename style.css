@@ -18,6 +18,7 @@
     height: 89px;
     background-color:#2d303a;
     border-bottom: 6px solid #323746;
+    margin-bottom: 100px;
     z-index: 100;
 }
 .header__logo {
@@ -468,13 +469,14 @@
 
 #message-block {
     position: absolute;
-    width: 100vw;
-    height: 100vh;
-    top:175em;
-    left:0;
-    z-index: 80;
+    width: 400px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
     background: gray;
+    border: 5px double black;
     z-index: 100;
+
 }
 .hidden{
     display: none;
@@ -485,9 +487,7 @@
 }
 
 #message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
+ padding-top: 50px;
     text-align: center;
     z-index: 100;
 }

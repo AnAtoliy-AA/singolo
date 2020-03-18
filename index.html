@@ -251,7 +251,7 @@
                         dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
                 </div>
                 <div class="contact">
-                    <form id="form" class="contact__form">
+                    <form id="contact-form" class="contact__form" >
                         <input type="text" id="quote_name" class="contact__input"
                             pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$" required placeholder="Name (Required)">
                         <input type="email" id="quote_email" class="contact__input" required
@@ -259,20 +259,18 @@
                         <input type="text" id="subject" class="contact__input" placeholder="Subject">
                         <textarea id="describe" class="contact__input input_changed"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button id="btn" class="button button__selected">Submit</button>
+                        <button type="button" id="btn" class="button button__selected">Submit</button>
                     </form>
-                    <div id="message-block" class="hiden">
-                        <div id="message" class="hiden">
+                    <div id="message-block" class="hidden">
+                        <div id="message">
                             <p id="message-name"></p>
                             <br>
-                            <p id="result1">
-                                <p>
-                                    <br>
-                                    <p id="result2"></p>
-                                    <br>
-                                    <button id="close-btn">OK</button>
+                            <p id="result-subject"></p>
+                            <br>
+                            <p id="result-describe"></p>
+                            <br>
+                            <button id="close-btn">OK</button>
                         </div>
-
                     </div>
                     <div class="contact__info colored">
                         <h3 class="contact__name">contact information</h3>
