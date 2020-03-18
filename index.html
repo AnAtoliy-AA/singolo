@@ -12,43 +12,52 @@
     <div class="wrapper">
         <header class="header container">
             <h1 class="header__logo">Singolo<span class="header__logo-star">*</span></h1>
-            <a name='navigation'></a>
-            <nav class="navigation" id="navbar">
-                <a class="navigation__item" href="#navigation">Home</a>
-                <a class="navigation__item" href="#services">Services</a>
-                <a class="navigation__item" href="#portfolio">Portfolio</a>
-                <a class="navigation__item" href="#about">About</a>
-                <a class="navigation__item" href="#contact">Contact</a>
-            </nav>
+            <a name='home'></a>
+            <ul class="navigation" id="navbar">
+                <li><a class="navigation__item navigation__item_selected" href="#home">Home</a></li>
+                <li><a class="navigation__item" href="#services">Services</a></li>
+                <li><a class="navigation__item" href="#portfolio">Portfolio</a></li>
+                <li><a class="navigation__item" href="#about">About</a></li>
+                <li><a class="navigation__item" href="#contact">Contact</a></li>
+            </ul>
         </header>
-        <main class="main">
-            <div class="slider container" id="slider">
+        <main class="main" id="main">
+            <section class="slider container" id="home">
                 <a class="slider__arrow" href="#">
                     <img src="assets/arrow.png" alt="arrow-left">
                 </a>
                 <a class="slider__arrow-right" href="#">
                     <img src="assets/arrow.png" alt="arrow-right">
                 </a>
-                <div class="slider__iphone" id="iphone">
-                    <img src="assets/iphone.png" alt="phone 1">
+                <div class="slide1">
+                    <div class="slider__iphone" id="iphone">
+                        <img src="assets/iphone.png" alt="phone 1">
+                    </div>
+                    <div class="slider__layer  iphone__layer">
+                        <img class="layer__vertical" src="assets/Layer1.png" alt="iphone-layer">
+                    </div>
+                    <div class="slider__shadow arrow">
+                        <img src="assets/Shadow.png" alt="shadow">
+                    </div>
+                    <div class=" slider__iphone_horizontal">
+                        <img src="assets/iphone.png" alt="phone 2">
+                    </div>
+                    <div class="slider__layer_horizontal iphone__layer">
+                        <img class="layer__horizontal" src="assets/Layer2.png" alt="iphone-layer">
+                    </div>
+                    <div class=slider__shadow_horizontal>
+                        <img src="assets/Shadow.png" alt="shadow">
+                    </div>
+                    <div class="secondLayer hidden">
+                        <img src="assets/layer4.png" alt="layer">
+                    </div>
                 </div>
-              <div class="slider__layer">
-                    <img class="layer__vertical" src="assets/Layer1.png" alt="iphone-layer">
-              </div>
-                <div class="slider__shadow">
-                    <img src="assets/Shadow.png" alt="shadow">
+                <div class="slide2">
+                    <img src="assets/layer4.png" alt="layer2">
                 </div>
-                <div class=" slider__iphone_horizontal">
-                    <img src="assets/iphone.png" alt="phone 2">
-                </div>
-                <div class="slider__layer_horizontal">
-                    <img class="layer__horizontal" src="assets/Layer2.png" alt="iphone-layer">
-                </div>
-                <div class=slider__shadow_horizontal>
-                    <img src="assets/Shadow.png" alt="shadow">
-                </div>
-            </div>
-            <section class="services container">
+
+            </section>
+            <section class="services container" id="services">
                 <a name='services'></a>
                 <div class="services__container">
                     <div class="section__description">
@@ -145,43 +154,35 @@
                     </div>
                 </div>
             </section>
-            <section class="portfolio container">
+            <section class="portfolio container" id="portfolio">
                 <a name='portfolio'></a>
                 <div class="section__description">
                     <h2 class="description__name">Portfolio</h2>
                     <p class="description__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
                         eget lacinia odio sem nec elit.</p>
                 </div>
-                <div class="buttons" id="picture-menu">
-                    <button class="button">All</button>
+                <div class="portfolio__buttons" id="picture-menu">
+                    <button class="button button__selected">All</button>
                     <button class="button">Web design</button>
                     <button class="button">Graphic design</button>
                     <button class="button">Artwork</button>
                 </div>
-                <div class="layout-4-columns" id="pictures">
-                    <div class="layout__directed">
-                        <img src="./assets/picture_1.png" alt="picture">
-                        <img src="./assets/picture_5.png" alt="picture">
-                        <img src="./assets/picture_9.png" alt="picture">
-                    </div>
-                    <div class="layout__directed">
-                        <img src="./assets/picture_2.png" alt="picture">
-                        <img src="./assets/picture_6.png" alt="picture">
-                        <img src="./assets/picture_10.png" alt="picture">
-                    </div>
-                    <div class="layout__directed">
-                        <img src="./assets/picture_3.png" alt="picture">
-                        <img src="./assets/picture_7.png" alt="picture">
-                        <img src="./assets/picture_11.png" alt="picture">
-                    </div>
-                    <div class="layout__directed">
-                        <img src="./assets/picture_4.png" alt="picture">
-                        <img src="./assets/picture_8.png" alt="picture">
-                        <img src="./assets/picture_12.png" alt="picture">
-                    </div>
-                </div>
+                <ul class="portfolio__pictures">
+                    <li><img class="picture" src="./assets/picture_1.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_2.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_3.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_4.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_5.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_6.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_7.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_8.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_9.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_10.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_11.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_12.png" alt="picture"></li>
+                </ul>
             </section>
-            <section class="about-us">
+            <section class="about-us" id="about">
                 <a name='about'></a>
                 <div class="section__description">
                     <h2 class="description__name">About us</h2>
@@ -239,7 +240,7 @@
                     </div>
                 </div>
             </section>
-            <section class="quote container">
+            <section class="quote container" id="contact">
                 <a name='contact'></a>
                 <div class="section__description">
                     <h2 class="description__name colored">Get a Quote</h2>
@@ -251,9 +252,10 @@
                 </div>
                 <div class="contact">
                     <form id="form" class="contact__form">
-                       <input type="text"  class="contact__input" pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$"
-                            required placeholder="Name (Required)">
-                        <input type="email" class="contact__input" required placeholder="Email (Required)">
+                        <input type="text" id="quote_name" class="contact__input"
+                            pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$" required placeholder="Name (Required)">
+                        <input type="email" id="quote_email" class="contact__input" required
+                            placeholder="Email (Required)">
                         <input type="text" id="subject" class="contact__input" placeholder="Subject">
                         <textarea id="describe" class="contact__input input_changed"
                             placeholder="Describe your project in detail..."></textarea>
@@ -261,15 +263,16 @@
                     </form>
                     <div id="message-block" class="hiden">
                         <div id="message" class="hiden">
-                            <p>Email sent</p>
+                            <p id="message-name"></p>
                             <br>
-                            <p id="result1"><p>
-                            <br>
-                            <p id="result2"></p>
-                            <br>
-                            <button id="close-btn" >OK</button>
+                            <p id="result1">
+                                <p>
+                                    <br>
+                                    <p id="result2"></p>
+                                    <br>
+                                    <button id="close-btn">OK</button>
                         </div>
-                        
+
                     </div>
                     <div class="contact__info colored">
                         <h3 class="contact__name">contact information</h3>
@@ -304,8 +307,8 @@
                 </div>
             </footer>
         </main>
-    </div>
-    <script src="script.js"></script>
+        </section>
+        <script src="script.js"></script>
 </body>
 
 </html>
