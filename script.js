@@ -1,12 +1,4 @@
 
-
-/*const SLIDER = document.querySelector('.slider');
-const IPHONE = document.querySelector('layer__vertical')*/
-
-
-
-
-
 document.addEventListener('scroll', onScroll);
 const sectionSelector = document.querySelectorAll('#main>section');
 const navbarLinks = document.querySelectorAll('#navbar a');
@@ -32,12 +24,66 @@ function onScroll(event) {
   });
 }
 
+//CAROUSEL
+
+const carouselItems = document.querySelectorAll('.carousel__item');
+const arrowLeft = document.querySelector('.slider__arrow.left');
+const arrowRight = document.querySelector('.slider__arrow.right');
+let activeItem = 0;
+let isEnabled = true;
+
+function changeActiveItem(n) {
+  activeItem = (n + carouselItems.length) % carouselItems.length;
+}
+
+function hideItem(direction) {
+  isEnabled = false;
+  carouselItems[activeItem].classList.add(direction);
+  carouselItems[activeItem].addEventListener('animationend', function() {
+    this.classList.remove('carousel__item_active', direction);
+  })
+}
+
+function showItem(direction) { 
+  carouselItems[activeItem].classList.add('carousel__item_next',direction);
+  carouselItems[activeItem].addEventListener('animationend', function() {
+    this.classList.remove('carousel__item_next', direction);
+    this.classList.add('carousel__item_active');
+    isEnabled = true;
+  })
+}
+function nextItem(n) {
+  hideItem('animation__to-right');
+  changeActiveItem(n - 1);
+  showItem('animation__from-left');
+}
+arrowLeft.addEventListener('click', function () {
+  if (isEnabled) {
+    previousItem(activeItem);
+  }
+});
+
+function previousItem(n) {
+  hideItem('animation__to-left');
+  changeActiveItem(n + 1);
+  showItem('animation__from-right');
+}
+arrowRight.addEventListener('click', function () {
+  if (isEnabled) {
+    nextItem(activeItem);
+  }
+});
+
+
+
+
 //iPHONE SCREEN
 iphoneScreenIsON.addEventListener('click', () => {
   iphoneScreenIsOFF.classList.toggle("hidden")
 })
 
 //PORTFOLIO PICTURES
+
 window.onload = function () {
   addButtonsClickHandler();
 }
@@ -48,24 +94,15 @@ const addButtonsClickHandler = () => {
       removeSelectedButtons();
       selectClickedButton(clickedButton);
       filterPicturesBySelectedButton(portfolioPictures);
-      /*
-      if (clickedButton.innerText === 'All') {
-        showStandardPicturesOrder();
-      } else {
-        filterPicturesBySelectedButton(portfolioPictures);
-      }
-      */
-    }
+       }
   })
 }
-
 const removeSelectedButtons = () => {
   let buttons = document.querySelectorAll('.portfolio__buttons .button');
   buttons.forEach(button => {
     button.classList.remove('button__selected');
   })
 }
-
 const selectClickedButton = (clickedButton) => {
   clickedButton.classList.add('button__selected');
 }
@@ -78,12 +115,6 @@ const filterPicturesBySelectedButton = (list) => {
   }
 }
 
-/*
-const showStandardPicturesOrder = () => {
-  portfolioPictures.classList.remove('wrap__reverse');
-}
-*/
-
 //RED BORDER PORTFOLIO PICTURES
 
 portfolioPictures.addEventListener('click', (event) => {
@@ -93,17 +124,7 @@ portfolioPictures.addEventListener('click', (event) => {
   event.target.classList.add('img__selected');
 });
 
-
-
-
-
 //SUBMIT FORM
-
-/*
-function submitForm(event) {
-  event.preventDefault();
-}*/
-
 
 const submitButton = document.getElementById('btn');
 
@@ -148,53 +169,4 @@ closeButton.addEventListener('click', () => {
   message_block.classList.add('hidden');
 });
 
-
-
-
-
-
-
-
-/*
-
-SLIDER.addEventListener('click', () => {
-  SLIDER.querySelectorAll('.arrow').forEach(el => el.classList.remove('navigation__item_selected'));
-  SLIDER.style.backgroundImage = 'url(assets/layer4.png)';
-
-
-  IPHONE.addEventListener('click', () => {
-    SLIDER.querySelectorAll('a').forEach(el => el.classList.remove('navigation__item_selected'));
-    IPHONE.classList.add('.hidden');
-  });
-
-  window.onload = function () {
-    addButtonsClickHandler();
-  }
-  pictures
-
-  let slideIndex = 1;
-  showSlides(slideIndex);
-
-  Next / previous controls
-  const plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
-
-  Thumbnail image controls
-  const currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
-
-  const showSlides(n) {
-    let slides = document.getElementsByClassName("mySlides");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (let i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-    }
-    slides[slideIndex - 1].style.display = "block";
-  }
-
-
-*/
 

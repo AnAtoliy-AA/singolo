@@ -5,7 +5,6 @@
     width: 1020px;
     margin-left: auto;
     margin-right: auto;
-   // scroll-behavior: smooth;
 }
 .container {
     padding: 0 40px 0 40px;
@@ -13,12 +12,12 @@
 
 .header {
     
-    position: fixed;
+    position: sticky;
+    top: 0;
     width: 940px;
     height: 89px;
     background-color:#2d303a;
     border-bottom: 6px solid #323746;
-    margin-bottom: 100px;
     z-index: 100;
 }
 .header__logo {
@@ -34,8 +33,6 @@
 .header__logo-star {
     color: #f06c64;
 }
-
-
 
 .navigation {
     display: -webkit-box;
@@ -77,44 +74,41 @@
  
 .slider {
     position: relative;
-    //margin-top: 95px;
-    height: 689px;
-    //height: 594px;
+    height: 594px;
     background-color:#f06c64;
     border-bottom: 6px solid #ea676b;
     z-index: 10;
 }
+
 .slider__arrow{
+    display: inline-block;
     position: absolute;
-   // top: 281px;
-    top: 376px;
-    left: 42px;
-    z-index: 60;
-}
-.slider__arrow:hover{
+    top: 50%;
     cursor: pointer;
-}
-.slider__arrow-right {
-    position: absolute;
-    //top: 277px;
-    top: 372px;
-    right: 40px;
-    -webkit-transform: rotate(180deg);
-        -ms-transform: rotate(180deg);
-            transform: rotate(180deg);
     z-index: 60;
 }
+
+.slider__arrow.left {
+    left: 5%;
+    right: auto;
+}
+
+.slider__arrow.right {
+    transform: rotate(180deg);
+    left: auto;
+    right: 5%;
+}
+
+
 .slider__iphone {
   position: absolute;
-  //top: 52px;
-  top: 147px;
+  top: 52px;
   left: 112px;
   z-index: 30;
 }
 .slider__shadow {
   position: absolute;
-  //top: 52px;
-  top: 147px;
+  top: 52px;
   left: 112px;
   z-index: 20;
 }
@@ -123,15 +117,13 @@
     position: absolute;
     width: 188px;
     height: 333px;
-   // top: 117px;
-   top: 212px;
-    left: 126px;
+    top: 117px;
+       left: 126px;
     z-index: 40;
 }
 .layer__vertical {
     position: absolute;
-    top: -39px;
-   // top: -134px;
+    top: -134px;
     left: -14px;
     z-index: 40;
 }
@@ -140,8 +132,7 @@
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-   // top: 50px;
-   top: 145px;
+    top: 50px;
     right: 261px;
     z-index: 30;
   }
@@ -149,8 +140,7 @@
     position: absolute;
     -webkit-transform: rotateY(180deg) rotateZ(90deg);
             transform: rotateY(180deg) rotateZ(90deg);
-   // top: 50px;
-   top: 145px;
+    top: 50px;
     right: 231px;
     z-index: 20;  
 }
@@ -159,16 +149,14 @@
     position: absolute;
     width: 334px;
     height: 189px;
-   // top: 187px;
-   top: 282px;
+   top: 187px;
     right: 202px;
     z-index: 40;
 }
 .layer__horizontal {
     position: absolute;
-    //top: -118px;
-    top: -23px;
-    left: -124px;
+    top: -118px;
+       left: -124px;
 }
 .services {
     height: 494px;
@@ -516,4 +504,59 @@
     src: url('./assets/Lato-Light.ttf') format("truetype");
     font-style: normal;
     font-weight: 300;
+}
+
+
+
+.carousel__item {
+    display: none;
+    position: relative;
+    animation: 0.4s ease-in-out;
+}
+
+.carousel__item_active,
+.carousel__item_next {
+    display: block;
+}
+
+.carousel__item_next {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.animation__to-left {
+ animation-name: toLeft;
+}
+
+.animation__to-right {
+    animation-name: toRight;
+    animation-direction: reverse;
+}
+
+.animation__from-left {
+    animation-name: toLeft;
+    animation-direction: reverse;
+}
+
+.animation__from-right {
+    animation-name: toRight;
+}
+
+@keyframes toLeft {
+    from {
+        left: 0;
+    }
+    to {
+        left: -100%;
+    }
+}
+
+@keyframes toRight {
+    from {
+        right:-100%;
+    }
+    to {
+        right: 0;
+    }
 }
