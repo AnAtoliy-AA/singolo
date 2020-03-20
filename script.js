@@ -1,12 +1,9 @@
 
+// NAVBAR ACTIVE LINK
 document.addEventListener('scroll', onScroll);
 const sectionSelector = document.querySelectorAll('#main>section');
 const navbarLinks = document.querySelectorAll('#navbar a');
 
-const portfolioPictures = document.querySelector('.portfolio__pictures');
-
-
-// NAVBAR
 function onScroll(event) {
   const currentPosition = window.scrollY;
 
@@ -23,7 +20,7 @@ function onScroll(event) {
   });
 }
 
-//ANCHOR
+//ANCHOR ANIMATION
 
 const anchors = document.querySelectorAll('.navigation__item');
 anchors.forEach((anchor) => {
@@ -88,28 +85,29 @@ arrowRight.addEventListener('click', function () {
 });
 
 //iPHONE SCREEN
-const iphoneScreenIsON = document.querySelector('.iphone__layer');
-const iphoneScreenIsOFF = document.querySelector('.iphone__layer>img');
+
+const iphoneScreenIsON = document.querySelector('.iphone__screen_left');
+const iphoneScreenIsOFF = document.querySelector('.iphone__screen_left>img');
 
 iphoneScreenIsON.addEventListener('click', () => {
   iphoneScreenIsOFF.classList.toggle("hidden");
-})
+});
+const iphoneRightScreenIsON = document.querySelector('.iphone__screen_right');
+const iphoneRightScreenIsOFF = document.querySelector('.iphone__screen_right>img');
 
-// iphoneScreenIsON.addEventListener('click', () => {
-//   if (iphoneScreenIsOFF instanceof hidden) {
-//     console.log(sssssssssssssssss);
-//     iphoneScreenIsOFF.classList.add("hidden");
-//   }
-//   else
-//   iphoneScreenIsOFF.classList.remove("hidden");
+iphoneRightScreenIsON.addEventListener('click', () => {
+  iphoneRightScreenIsOFF.classList.toggle("hidden");
+});
 
-//PORTFOLIO PICTURES
+  //PORTFOLIO PICTURES
 
-window.onload = function () {
-  addButtonsClickHandler();
-}
-const addButtonsClickHandler = () => {
-  document.querySelector('.portfolio__buttons').addEventListener('click', (e) => {
+  window.onload = function () {
+    addButtonsClickHandler();
+  }
+  const portfolioPictures = document.querySelector('.portfolio__pictures');
+  const portfolioButtons = document.querySelector('.portfolio__buttons');
+  const addButtonsClickHandler = () => {
+    portfolioButtons.addEventListener('click', (e) => {
     if (e.target.classList.contains('button')) {
       let clickedButton = e.target;
       removeSelectedButtons();
@@ -189,6 +187,3 @@ closeButton.addEventListener('click', () => {
   contactForm.reset();
   message_block.classList.add('hidden');
 });
-
-
-

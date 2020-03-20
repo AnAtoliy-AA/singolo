@@ -11,10 +11,9 @@
 }
 
 .header {
-    
     position: sticky;
     top: 0;
-    width: 940px;
+    width: 100%;
     height: 89px;
     background-color:#2d303a;
     border-bottom: 6px solid #323746;
@@ -28,6 +27,7 @@
     text-transform: uppercase;
     text-decoration: none;
     padding-top: 29px;
+    padding-left: 40px;
     color:#ffffff;
 }
 .header__logo-star {
@@ -73,18 +73,15 @@
 } 
  
 .slider {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    background-clip:content-box;
     position: relative;
     height: 594px;
     background-color:#f06c64;
-   /* border-bottom: 6px solid #ea676b;*/
     z-index: 10;
 }
-/*
-.slider__border{
-    bottom: 0;
-    height: 6px;
-    background-color: #ea676b;
-}*/
+
 .slider__background{
 height: 594px;
 background-color:#f06c64;
@@ -171,6 +168,10 @@ z-index: 10;
        left: -124px;
 }
 .services {
+    padding-top: 89px;
+	margin-top: -89px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
     height: 494px;
     background-color: #f2f2f2;
     border-bottom: 6px solid #ffffff;  
@@ -215,6 +216,7 @@ z-index: 10;
     list-style-type: none;
     align-content: space-between;
     justify-content: space-between;
+    
     padding: 0;
     height: 610px;
 }
@@ -282,7 +284,16 @@ z-index: 10;
     width: auto;
 }
 
+.anchor {
+    border-top: 95px solid transparent;
+    margin-top: -95px;
+    background-clip:content-box;
+}
 .portfolio {
+    padding-top: 55px;
+	margin-top: -55px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
     height: 863px;
     background-color:#2d303a;
     border-bottom: 6px solid #2e313b;
@@ -314,17 +325,24 @@ z-index: 10;
     outline: 5px solid #F06C64 ;
   }
 .about-us {
+    padding-top: 95px;
+	margin-top: -95px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
     height: 728px;
     background-color:#f2f2f2;
     border-bottom: 6px solid #ffffff;
     overflow: hidden;
-   padding: 0 40px 0 40px;
 }
 .about__container {
     padding-top: 45px;
     height: 500px;
 }
 .quote {
+    padding-top: 95px;
+	margin-top: -95px;
+	-webkit-background-clip: content-box;
+	background-clip: content-box;
     height: 648px;
     background-color: #f06c64;
     border-bottom: 6px solid #ea676b; 
