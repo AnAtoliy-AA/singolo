@@ -12,7 +12,7 @@
     <div class="wrapper">
         <header class="header container">
             <h1 class="header__logo">Singolo<span class="header__logo-star">*</span></h1>
-            <a name='home'></a>
+            <a class="anchor" name="home"></a>
             <ul class="navigation" id="navbar">
                 <li><a class="navigation__item navigation__item_selected" href="#home">Home</a></li>
                 <li><a class="navigation__item" href="#services">Services</a></li>
@@ -26,42 +26,43 @@
                 <div class="carousel">
                     <div class="carousel__container">
                         <div class="carousel__item carousel__item_active">
-                                <div class="slider__iphone" id="iphone">
-                                    <img src="assets/iphone.png" alt="phone 1">
-                                </div>
-                                <div class="slider__layer  iphone__layer">
-                                    <img class="layer__vertical" src="assets/Layer1.png" alt="iphone-layer">
-                                </div>
-                                <div class="slider__shadow arrow">
-                                    <img src="assets/Shadow.png" alt="shadow">
-                                </div>
-                                <div class=" slider__iphone_horizontal">
-                                    <img src="assets/iphone.png" alt="phone 2">
-                                </div>
-                                <div class="slider__layer_horizontal iphone__layer">
-                                    <img class="layer__horizontal" src="assets/Layer2.png" alt="iphone-layer">
-                                </div>
-                                <div class=slider__shadow_horizontal>
-                                    <img src="assets/Shadow.png" alt="shadow">
-                                </div>
-                                <div class="secondLayer hidden">
-                                    <img src="assets/layer4.png" alt="layer">
-                                </div>
+                            <div class="slider__iphone" id="iphone">
+                                <img src="assets/iphone.png" alt="phone 1">
+                            </div>
+                            <div class="slider__layer  iphone__layer">
+                                <img class="layer__vertical" src="assets/Layer1.png" alt="iphone-layer">
+                            </div>
+                            <div class="slider__shadow arrow">
+                                <img src="assets/Shadow.png" alt="shadow">
+                            </div>
+                            <div class=" slider__iphone_horizontal">
+                                <img src="assets/iphone.png" alt="phone 2">
+                            </div>
+                            <div class="slider__layer_horizontal iphone__layer">
+                                <img class="layer__horizontal" src="assets/Layer2.png" alt="iphone-layer">
+                            </div>
+                            <div class=slider__shadow_horizontal>
+                                <img src="assets/Shadow.png" alt="shadow">
+                            </div>
+                            <div class="secondLayer hidden">
+                                <img src="assets/layer4.png" alt="layer">
+                            </div>
+                            <div class="slider__background"></div>
+
                         </div>
-                    </div>
-                    <div class="carousel__item">
+                        <div class="carousel__item">
                             <img src="assets/layer4.png" alt="layer2">
+                        </div>
+                        <a class="slider__arrow left" href="#">
+                            <img src="assets/arrow.png" alt="arrow-left">
+                        </a>
+                        <a class="slider__arrow right" href="#">
+                            <img src="assets/arrow.png" alt="arrow-right">
+                        </a>
                     </div>
-                    <a class="slider__arrow left" href="#">
-                        <img src="assets/arrow.png" alt="arrow-left">
-                    </a>
-                    <a class="slider__arrow right" href="#">
-                        <img src="assets/arrow.png" alt="arrow-right">
-                    </a>
-                </div>
             </section>
             <section class="services container" id="services">
-                <a name='services'></a>
+                <a class="anchor" name="services"></a>
                 <div class="services__container">
                     <div class="section__description">
                         <h2 class="description__name">Our Services</h2>
@@ -158,7 +159,7 @@
                 </div>
             </section>
             <section class="portfolio container" id="portfolio">
-                <a name='portfolio'></a>
+                <a class="anchor" name="portfolio"></a>
                 <div class="section__description">
                     <h2 class="description__name">Portfolio</h2>
                     <p class="description__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
@@ -186,7 +187,7 @@
                 </ul>
             </section>
             <section class="about-us" id="about">
-                <a name='about'></a>
+                <a class="anchor" name="about"></a>
                 <div class="section__description">
                     <h2 class="description__name">About us</h2>
                     <p class="description__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum.
@@ -244,7 +245,7 @@
                 </div>
             </section>
             <section class="quote container" id="contact">
-                <a name='contact'></a>
+                <a class="anchor" name="contact"></a>
                 <div class="section__description">
                     <h2 class="description__name colored">Get a Quote</h2>
                     <p class="description__text colored">Fusce dapibus, tellus ac cursus commodo, tortor mauris
@@ -262,7 +263,7 @@
                         <input type="text" id="subject" class="contact__input" placeholder="Subject">
                         <textarea id="describe" class="contact__input input_changed"
                             placeholder="Describe your project in detail..."></textarea>
-                        <button type="button" id="btn" class="button button__selected">Submit</button>
+                        <button type="submit" id="btn" class="button button__selected">Submit</button>
                     </form>
                     <div id="message-block" class="hidden">
                         <div id="message">

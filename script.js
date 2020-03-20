@@ -2,8 +2,7 @@
 document.addEventListener('scroll', onScroll);
 const sectionSelector = document.querySelectorAll('#main>section');
 const navbarLinks = document.querySelectorAll('#navbar a');
-const iphoneScreenIsON = document.querySelector('.iphone__layer');
-const iphoneScreenIsOFF = document.querySelector('.iphone__layer>img');
+
 const portfolioPictures = document.querySelector('.portfolio__pictures');
 
 
@@ -24,6 +23,20 @@ function onScroll(event) {
   });
 }
 
+//ANCHOR
+
+const anchors = document.querySelectorAll('.navigation__item');
+anchors.forEach((anchor) => {
+  anchor.addEventListener('click', function (event) {
+    event.preventDefault();
+    const anchorBlock = anchor.getAttribute('href').substring(1);
+    document.getElementById(anchorBlock).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    })
+  })
+})
+
 //CAROUSEL
 
 const carouselItems = document.querySelectorAll('.carousel__item');
@@ -39,14 +52,14 @@ function changeActiveItem(n) {
 function hideItem(direction) {
   isEnabled = false;
   carouselItems[activeItem].classList.add(direction);
-  carouselItems[activeItem].addEventListener('animationend', function() {
+  carouselItems[activeItem].addEventListener('animationend', function () {
     this.classList.remove('carousel__item_active', direction);
   })
 }
 
-function showItem(direction) { 
-  carouselItems[activeItem].classList.add('carousel__item_next',direction);
-  carouselItems[activeItem].addEventListener('animationend', function() {
+function showItem(direction) {
+  carouselItems[activeItem].classList.add('carousel__item_next', direction);
+  carouselItems[activeItem].addEventListener('animationend', function () {
     this.classList.remove('carousel__item_next', direction);
     this.classList.add('carousel__item_active');
     isEnabled = true;
@@ -74,13 +87,21 @@ arrowRight.addEventListener('click', function () {
   }
 });
 
-
-
-
 //iPHONE SCREEN
+const iphoneScreenIsON = document.querySelector('.iphone__layer');
+const iphoneScreenIsOFF = document.querySelector('.iphone__layer>img');
+
 iphoneScreenIsON.addEventListener('click', () => {
-  iphoneScreenIsOFF.classList.toggle("hidden")
+  iphoneScreenIsOFF.classList.toggle("hidden");
 })
+
+// iphoneScreenIsON.addEventListener('click', () => {
+//   if (iphoneScreenIsOFF instanceof hidden) {
+//     console.log(sssssssssssssssss);
+//     iphoneScreenIsOFF.classList.add("hidden");
+//   }
+//   else
+//   iphoneScreenIsOFF.classList.remove("hidden");
 
 //PORTFOLIO PICTURES
 
@@ -94,7 +115,7 @@ const addButtonsClickHandler = () => {
       removeSelectedButtons();
       selectClickedButton(clickedButton);
       filterPicturesBySelectedButton(portfolioPictures);
-       }
+    }
   })
 }
 const removeSelectedButtons = () => {
@@ -135,8 +156,8 @@ const formResultSubject = document.getElementById('result-subject');
 const formResultDescribe = document.getElementById('result-describe');
 const closeButton = document.getElementById('close-btn');
 
-submitButton.addEventListener('click', () => {
-  event.preventDefault();
+contactForm.addEventListener('submit', () => {
+  event.preventDefault()
   message_block.classList.remove('hidden');
   const quote_name = document.getElementById('quote_name').value.toString();
   const quote_email = document.getElementById('quote_email').value.toString();
@@ -168,5 +189,6 @@ closeButton.addEventListener('click', () => {
   contactForm.reset();
   message_block.classList.add('hidden');
 });
+
 
 
