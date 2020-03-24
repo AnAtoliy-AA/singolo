@@ -11,52 +11,54 @@
 <body>
     <div class="wrapper">
         <header class="header">
-            <h1 class="header__logo">Singolo<span class="header__logo-star">*</span></h1>
-            <a class="anchor" name="home"></a>
-            <div class="responsive__menu__icon">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="responsive__menu__icon">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+            <div class="navigation__menu">
+                <h1 class="header__logo">Singolo<span class="header__logo-star">*</span></h1>
+                <a class="anchor" name="home"></a>
+                <ul class="navigation" id="navbar">
+                    <li><a class="navigation__item navigation__item_selected" href="#home">Home</a></li>
+                    <li><a class="navigation__item" href="#services">Services</a></li>
+                    <li><a class="navigation__item" href="#portfolio">Portfolio</a></li>
+                    <li><a class="navigation__item" href="#about">About</a></li>
+                    <li><a class="navigation__item navigation__last" href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <ul class="navigation" id="navbar">
-                <li><a class="navigation__item navigation__item_selected" href="#home">Home</a></li>
-                <li><a class="navigation__item" href="#services">Services</a></li>
-                <li><a class="navigation__item" href="#portfolio">Portfolio</a></li>
-                <li><a class="navigation__item" href="#about">About</a></li>
-                <li><a class="navigation__item navigation__last" href="#contact">Contact</a></li>
-            </ul>
         </header>
         <main class="main" id="main">
             <section class="slider" id="home">
                 <div class="carousel">
                     <div class="carousel__container ">
-                        <div class="carousel__item carousel__item_active slider__hight iphone__container">
+                            <div class="carousel__item carousel__item_active slider__hight">
                             <div class="slider__iphone iphone__responsive" id="iphone">
                                 <img src="assets/iphone.png" alt="phone 1">
                             </div>
-                            <div class="slider__layer  iphone__screen_left iphone__responsive">
-                                <img class="layer__vertical" src="assets/Layer1.png" alt="iphone-layer">
+                            <div class="slider__layer  iphone__screen_left layer__responsive_vertical">
+                                <img class="layer__vertical" src="assets/phone-vertical-display.png" alt="iphone-layer">
                             </div>
-                            <div class="slider__shadow iphone__responsive">
+                            <div class="slider__shadow shadow__responsive">
                                 <img src="assets/Shadow.png" alt="shadow">
                             </div>
                             <div class=" slider__iphone_horizontal iphone__responsive">
                                 <img src="assets/iphone.png" alt="phone 2">
                             </div>
-                            <div class="slider__layer_horizontal iphone__screen_right iphone__responsive">
-                                <img class="layer__horizontal" src="assets/Layer2.png" alt="iphone-layer">
+                            <div class="slider__layer_horizontal iphone__screen_right layer__responsive_horizontal">
+                                <img class="layer__horizontal" src="assets/phone-horizontal-display.png" alt="iphone-layer">
                             </div>
-                            <div class="slider__shadow_horizontal iphone__responsive">
+                            <div class="slider__shadow_horizontal shadow__responsive">
                                 <img src="assets/Shadow.png" alt="shadow">
                             </div>
                             <div class="secondLayer hidden iphone__responsive">
                                 <img src="assets/layer4.png" alt="layer">
                             </div>
-                            <div class="slider__background slider__hight"></div>
+                            <div class="slider__background"></div>
 
                         </div>
                         <div class="carousel__item">
-                            <img class="slider__hight" src="assets/layer4.png" alt="layer2">
+                            <img class="slide" src="assets/layer4.png" alt="layer2">
                         </div>
                         <a class="slider__arrow left" href="#">
                             <img src="assets/arrow.png" alt="arrow-left">
@@ -255,7 +257,8 @@
                     <a class="anchor" name="contact"></a>
                     <div class="section__description">
                         <h2 class="description__name quote__colored">Get a Quote</h2>
-                        <p class="description__text quote__colored">Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                        <p class="description__text quote__colored">Fusce dapibus, tellus ac cursus commodo, tortor
+                            mauris
                             condimentum. Duis
                             mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                             Fusce

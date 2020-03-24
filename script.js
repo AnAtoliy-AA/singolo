@@ -20,12 +20,25 @@ function onScroll(event) {
   });
 }
 
+// RESPONSIVE NAVBAR
+//const responsiveNavigatioinMenuIconActive = document.querySelector('.responsive__menu__icon_active');
+const responsiveNavigatioinMenuIcon = document.querySelector('.responsive__menu__icon');
+const responsiveNavigatioinMenu = document.querySelector('.navigation__menu');
+const responsiveNavigatioin = document.querySelector('.navigation');
+responsiveNavigatioinMenuIcon.addEventListener('click', () => { 
+  responsiveNavigatioinMenuIcon.classList.toggle("responsive__menu__icon_active");
+  responsiveNavigatioinMenu.classList.toggle("navigation__menu_active");
+  responsiveNavigatioin.classList.toggle("responsive__navigation");
+});
+
 //ANCHOR ANIMATION
 
 const anchors = document.querySelectorAll('.navigation__item');
 anchors.forEach((anchor) => {
   anchor.addEventListener('click', function (event) {
     event.preventDefault();
+    responsiveNavigatioinMenu.classList.toggle("navigation__menu_active");
+  responsiveNavigatioin.classList.toggle("responsive__navigation");
     const anchorBlock = anchor.getAttribute('href').substring(1);
     document.getElementById(anchorBlock).scrollIntoView({
       behavior: 'smooth',
@@ -87,18 +100,27 @@ arrowRight.addEventListener('click', function () {
 //iPHONE SCREEN
 
 const iphoneScreenIsON = document.querySelector('.iphone__screen_left');
-const iphoneScreenIsOFF = document.querySelector('.iphone__screen_left>img');
+const iphoneScreen = document.querySelector('.iphone__screen_left>img');
 
 iphoneScreenIsON.addEventListener('click', () => {
-  iphoneScreenIsOFF.classList.toggle("hidden");
+  iphoneScreen.classList.toggle("hidden");
+});
+
+const iphoneScreenIsOff = document.querySelector('.slider__iphone');
+iphoneScreenIsOff.addEventListener('click', () => {
+  iphoneScreen.classList.toggle("hidden");
 });
 const iphoneRightScreenIsON = document.querySelector('.iphone__screen_right');
-const iphoneRightScreenIsOFF = document.querySelector('.iphone__screen_right>img');
+const iphoneRightScreen = document.querySelector('.iphone__screen_right>img');
 
 iphoneRightScreenIsON.addEventListener('click', () => {
-  iphoneRightScreenIsOFF.classList.toggle("hidden");
+  iphoneRightScreen.classList.toggle("hidden");
 });
 
+const iphoneRightScreenIsOff = document.querySelector('.slider__iphone_horizontal');
+iphoneRightScreenIsOff.addEventListener('click', () => {
+  iphoneRightScreen.classList.toggle("hidden");
+});
   //PORTFOLIO PICTURES
 
   window.onload = function () {
