@@ -13,45 +13,50 @@
         <header class="header">
             <h1 class="header__logo">Singolo<span class="header__logo-star">*</span></h1>
             <a class="anchor" name="home"></a>
+            <div class="responsive__menu__icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+            </div>
             <ul class="navigation" id="navbar">
                 <li><a class="navigation__item navigation__item_selected" href="#home">Home</a></li>
                 <li><a class="navigation__item" href="#services">Services</a></li>
                 <li><a class="navigation__item" href="#portfolio">Portfolio</a></li>
                 <li><a class="navigation__item" href="#about">About</a></li>
-                <li><a class="navigation__item" href="#contact">Contact</a></li>
+                <li><a class="navigation__item navigation__last" href="#contact">Contact</a></li>
             </ul>
         </header>
         <main class="main" id="main">
             <section class="slider" id="home">
                 <div class="carousel">
-                    <div class="carousel__container">
-                        <div class="carousel__item carousel__item_active">
-                            <div class="slider__iphone" id="iphone">
+                    <div class="carousel__container ">
+                        <div class="carousel__item carousel__item_active slider__hight iphone__container">
+                            <div class="slider__iphone iphone__responsive" id="iphone">
                                 <img src="assets/iphone.png" alt="phone 1">
                             </div>
-                            <div class="slider__layer  iphone__screen_left">
+                            <div class="slider__layer  iphone__screen_left iphone__responsive">
                                 <img class="layer__vertical" src="assets/Layer1.png" alt="iphone-layer">
                             </div>
-                            <div class="slider__shadow arrow">
+                            <div class="slider__shadow iphone__responsive">
                                 <img src="assets/Shadow.png" alt="shadow">
                             </div>
-                            <div class=" slider__iphone_horizontal">
+                            <div class=" slider__iphone_horizontal iphone__responsive">
                                 <img src="assets/iphone.png" alt="phone 2">
                             </div>
-                            <div class="slider__layer_horizontal iphone__screen_right">
+                            <div class="slider__layer_horizontal iphone__screen_right iphone__responsive">
                                 <img class="layer__horizontal" src="assets/Layer2.png" alt="iphone-layer">
                             </div>
-                            <div class=slider__shadow_horizontal>
+                            <div class="slider__shadow_horizontal iphone__responsive">
                                 <img src="assets/Shadow.png" alt="shadow">
                             </div>
-                            <div class="secondLayer hidden">
+                            <div class="secondLayer hidden iphone__responsive">
                                 <img src="assets/layer4.png" alt="layer">
                             </div>
-                            <div class="slider__background"></div>
+                            <div class="slider__background slider__hight"></div>
 
                         </div>
                         <div class="carousel__item">
-                            <img src="assets/layer4.png" alt="layer2">
+                            <img class="slider__hight" src="assets/layer4.png" alt="layer2">
                         </div>
                         <a class="slider__arrow left" href="#">
                             <img src="assets/arrow.png" alt="arrow-left">
@@ -63,100 +68,98 @@
             </section>
             <section class="services" id="services">
                 <a class="anchor" name="services"></a>
-                <div class="services__container container">
-                    <div class="section__description">
-                        <h2 class="description__name">Our Services</h2>
-                        <p class="description__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris
-                            condimentum.
-                            Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
-                            elit.
-                        </p>
-                    </div>
-                    <div class="card__container">
-                        <div class="layout-3-columns">
-                            <div class="card">
-                                <div class="card__logo">
-                                    <img src="./assets/logo1.png" alt="logo">
-                                </div>
-                                <div class="card__description">
-                                    <h3 class="card__name">Custom design</h3>
-                                    <p class="card__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus
-                                        in
-                                        quam
-                                        laoret, viverra
-                                        lacus ut, ultrices velit.
-                                    </p>
-                                </div>
+
+                <div class="section__description container">
+                    <h2 class="description__name">Our Services</h2>
+                    <p class="description__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                        condimentum.
+                        Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec
+                        elit.
+                    </p>
+                </div>
+                <div class="card__container">
+                    <div class="layout-3-columns">
+                        <div class="card">
+                            <div class="card__logo">
+                                <img src="./assets/logo1.png" alt="logo">
                             </div>
-                            <div class="card">
-                                <div class="card__logo">
-                                    <img src="./assets/logo2.png" alt="logo">
-                                </div>
-                                <div class="card__description">
-                                    <h3 class="card__name">Inovative ideas</h3>
-                                    <p class="card__text">Quisque luctus, quam eget molestie com-modo, lacus purus
-                                        cursus
-                                        purus, nec rutrum
-                                        tellus dolor id lorem.</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card__logo">
-                                    <img src="./assets/logo3.png" alt="logo">
-                                </div>
-                                <div class="card__description">
-                                    <h3 class="card__name">Love is the answer</h3>
-                                    <p class="card__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
-                                        turpis,
-                                        et
-                                        consequat
-                                        felis. Quisque condimentum.</p>
-                                </div>
+                            <div class="card__description">
+                                <h3 class="card__name">Custom design</h3>
+                                <p class="card__text">Curabitur vestibulum eget mauris quis laoreet. Phasellus
+                                    in
+                                    quam
+                                    laoret, viverra
+                                    lacus ut, ultrices velit.
+                                </p>
                             </div>
                         </div>
-                        <div class="layout-3-columns">
-                            <div class="card">
-                                <div class="card__logo">
-                                    <img src="./assets/logo4.png" alt="logo">
-                                </div>
-                                <div class="card__description">
-                                    <h3 class="card__name">Responsive layout</h3>
-                                    <p class="card__text">Sed porttitor placerat rhoncus. In at nunc tellus.
-                                        Maecenas
-                                        blandit
-                                        nunc ligula.
-                                        Prae-sent elit leo.</p>
-                                </div>
+                        <div class="card">
+                            <div class="card__logo">
+                                <img src="./assets/logo2.png" alt="logo">
                             </div>
-                            <div class="card">
-                                <div class="card__logo">
-                                    <img src="./assets/logo5.png" alt="logo">
-                                </div>
-                                <div class="card__description">
-                                    <h3 class="card__name">24/7 support</h3>
-                                    <p class="card__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula
-                                        nisi.
-                                        Nulla
-                                        a
-                                        sem erat.
-                                        Pellen-tesque egestas venenatas venenatis lorem.</p>
-                                </div>
+                            <div class="card__description">
+                                <h3 class="card__name">Inovative ideas</h3>
+                                <p class="card__text">Quisque luctus, quam eget molestie com-modo, lacus purus
+                                    cursus
+                                    purus, nec rutrum
+                                    tellus dolor id lorem.</p>
                             </div>
-                            <div class="card">
-                                <div class="card__logo">
-                                    <img src="./assets/logo6.png" alt="logo">
-                                </div>
-                                <div class="card__description">
-                                    <h3 class="card__name">Feel like a star</h3>
-                                    <p class="card__text">Quisque henderit purus dapibus, ornare nibh vitae, viverra
-                                        nibh.
-                                        Fuscue vitae aliquam
-                                        tellus.</p>
-                                </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__logo">
+                                <img src="./assets/logo3.png" alt="logo">
+                            </div>
+                            <div class="card__description">
+                                <h3 class="card__name">Love is the answer</h3>
+                                <p class="card__text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet
+                                    turpis,
+                                    et
+                                    consequat
+                                    felis. Quisque condimentum.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__logo">
+                                <img src="./assets/logo4.png" alt="logo">
+                            </div>
+                            <div class="card__description">
+                                <h3 class="card__name">Responsive layout</h3>
+                                <p class="card__text">Sed porttitor placerat rhoncus. In at nunc tellus.
+                                    Maecenas
+                                    blandit
+                                    nunc ligula.
+                                    Prae-sent elit leo.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__logo">
+                                <img src="./assets/logo5.png" alt="logo">
+                            </div>
+                            <div class="card__description">
+                                <h3 class="card__name">24/7 support</h3>
+                                <p class="card__text">Vivamus vel quam lacinia, tincidunt dui non, vehicula
+                                    nisi.
+                                    Nulla
+                                    a
+                                    sem erat.
+                                    Pellen-tesque egestas venenatas venenatis lorem.</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card__logo">
+                                <img src="./assets/logo6.png" alt="logo">
+                            </div>
+                            <div class="card__description">
+                                <h3 class="card__name">Feel like a star</h3>
+                                <p class="card__text">Quisque henderit purus dapibus, ornare nibh vitae, viverra
+                                    nibh.
+                                    Fuscue vitae aliquam
+                                    tellus.</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
             </section>
             <section class="portfolio" id="portfolio">
                 <div class="container">
@@ -172,21 +175,22 @@
                         <button class="button">Graphic design</button>
                         <button class="button">Artwork</button>
                     </div>
-                    <ul class="portfolio__pictures">
-                        <li><img class="picture" src="./assets/picture_1.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_2.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_3.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_4.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_5.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_6.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_7.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_8.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_9.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_10.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_11.png" alt="picture"></li>
-                        <li><img class="picture" src="./assets/picture_12.png" alt="picture"></li>
-                    </ul>
                 </div>
+                <ul class="portfolio__pictures">
+                    <li><img class="picture" src="./assets/picture_1.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_2.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_3.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_4.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_5.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_6.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_7.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_8.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_9.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_10.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_11.png" alt="picture"></li>
+                    <li><img class="picture" src="./assets/picture_12.png" alt="picture"></li>
+                </ul>
+
             </section>
             <section class="about-us" id="about">
                 <div class="container">
@@ -198,52 +202,49 @@
                             Fusce dapibus, tellus ac cursus commodo,tortor mauris condimentum nibh.</p>
                     </div>
                     <div class="about__container">
-                        <div class="layout-3-columns">
-                            <div class="card layout__directed">
-                                <img src="assets/photo_1.png" alt="Photo">
-                                <h3 class="card__name card__name_modified">Adam Jensenrajeshramayankoothrappali
-                                    anastrophysicistinthephysicsdepartmentatcaltech</h3>
-                                <p class="card__text card__text_width">Quisque luctus, quam eget molestie commodo, lacus
-                                    purus
-                                    cursus
-                                    purus, nec rutrum tellus
-                                    dolor id lorem.</p>
-                                <div class="networks">
-                                    <img src="assets/icon_facebook.png" alt="fcb">
-                                    <img src="assets/icon_google.png" alt="ggl">
-                                    <img src="assets/icon_twitter.png" alt="twr">
-                                    <img src="assets/icon_instagram.png" alt="inst">
-                                </div>
+                        <div class="about__card layout__directed">
+                            <img class="about__picture" src="assets/photo_1.png" alt="Photo">
+                            <h3 class="card__name card__name_modified">Adam Jensen</h3>
+                            <p class="card__text card__text_width">Quisque luctus, quam eget molestie commodo, lacus
+                                purus
+                                cursus
+                                purus, nec rutrum tellus
+                                dolor id lorem.</p>
+                            <div class="networks">
+                                <img src="assets/icon_facebook.png" alt="fcb">
+                                <img src="assets/icon_google.png" alt="ggl">
+                                <img src="assets/icon_twitter.png" alt="twr">
+                                <img src="assets/icon_instagram.png" alt="inst">
                             </div>
-                            <div class="card layout__directed">
-                                <img src="assets/photo_2.png" alt="Photo">
-                                <h3 class="card__name card__name_modified">Desmond Miles</h3>
-                                <p class="card__text card__text_width">Curabitur vestibulum eget mauris quis laoreet.
-                                    Phasellus
-                                    in quam,
-                                    viverra lacus ut,
-                                    ultrices velit.</p>
-                                <div class="networks">
-                                    <img src="assets/icon_facebook.png" alt="fcb">
-                                    <img src="assets/icon_google.png" alt="ggl">
-                                    <img src="assets/icon_twitter.png" alt="twr">
-                                    <img src="assets/icon_instagram.png" alt="inst">
-                                </div>
+                        </div>
+                        <div class="about__card layout__directed">
+                            <img class="about__picture" src="assets/photo_2.png" alt="Photo">
+                            <h3 class="card__name card__name_modified">Desmond Miles</h3>
+                            <p class="card__text card__text_width">Curabitur vestibulum eget mauris quis laoreet.
+                                Phasellus
+                                in quam,
+                                viverra lacus ut,
+                                ultrices velit.</p>
+                            <div class="networks">
+                                <img src="assets/icon_facebook.png" alt="fcb">
+                                <img src="assets/icon_google.png" alt="ggl">
+                                <img src="assets/icon_twitter.png" alt="twr">
+                                <img src="assets/icon_instagram.png" alt="inst">
                             </div>
-                            <div class="card layout__directed">
-                                <img src="assets/photo_3.png" alt="Photo">
-                                <h3 class="card__name card__name_modified">Scolara Visari</h3>
-                                <p class="card__text card__text_width">Nulla sed nunc et tortor luctus faucibus. Morbi
-                                    at
-                                    aliquet turpis,
-                                    et consequat felis.
-                                    Quisque condimentum.</p>
-                                <div class="networks">
-                                    <img src="assets/icon_facebook.png" alt="fcb">
-                                    <img src="assets/icon_google.png" alt="ggl">
-                                    <img src="assets/icon_twitter.png" alt="twr">
-                                    <img src="assets/icon_instagram.png" alt="inst">
-                                </div>
+                        </div>
+                        <div class="about__card layout__directed">
+                            <img class="about__picture" src="assets/photo_3.png" alt="Photo">
+                            <h3 class="card__name card__name_modified">Scolara Visari</h3>
+                            <p class="card__text card__text_width">Nulla sed nunc et tortor luctus faucibus. Morbi
+                                at
+                                aliquet turpis,
+                                et consequat felis.
+                                Quisque condimentum.</p>
+                            <div class="networks">
+                                <img src="assets/icon_facebook.png" alt="fcb">
+                                <img src="assets/icon_google.png" alt="ggl">
+                                <img src="assets/icon_twitter.png" alt="twr">
+                                <img src="assets/icon_instagram.png" alt="inst">
                             </div>
                         </div>
                     </div>
@@ -253,8 +254,8 @@
                 <div class="container">
                     <a class="anchor" name="contact"></a>
                     <div class="section__description">
-                        <h2 class="description__name colored">Get a Quote</h2>
-                        <p class="description__text colored">Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                        <h2 class="description__name quote__colored">Get a Quote</h2>
+                        <p class="description__text quote__colored">Fusce dapibus, tellus ac cursus commodo, tortor mauris
                             condimentum. Duis
                             mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.
                             Fusce
@@ -283,7 +284,7 @@
                                 <button id="close-btn">OK</button>
                             </div>
                         </div>
-                        <div class="contact__info colored">
+                        <div class="contact__info quote__colored">
                             <h3 class="contact__name">contact information</h3>
                             <p class="contact__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh.
                                 Fusce
