@@ -118,7 +118,7 @@ z-index: 10;
 .slider__arrow{
     display: inline-block;
     position: absolute;
-    top: 50%;
+    top: 45%;
     cursor: pointer;
     z-index: 60;
 }
@@ -137,19 +137,19 @@ z-index: 10;
 
 .slider__iphone {
   position: absolute;
-  top: 52px;
+  top: 54px;
   left: 11%;
   z-index: 30;
 }
 .slider__shadow {
   position: absolute;
-  top: 52px;
+  top: 54px;
   left: 11%;
   z-index: 20;
 }
 .slider__layer {
     position: absolute;
-    top: 115px;
+    top: 119px;
     left: 12%;
     z-index: 40;
 }
@@ -159,7 +159,7 @@ z-index: 10;
     -webkit-transform: rotate(90deg);
         -ms-transform: rotate(90deg);
             transform: rotate(90deg);
-    top: 50px;
+    top: 57px;
     left: 53%;
     z-index: 30;
   }
@@ -167,18 +167,18 @@ z-index: 10;
     position: absolute;
     -webkit-transform: rotateY(180deg) rotateZ(90deg);
             transform: rotateY(180deg) rotateZ(90deg);
-    top: 50px;
+    top: 57px;
    left: 54%;
     z-index: 20;  
 }
 .slider__layer_horizontal {
     position: absolute;
-    top: 183px;
-    left: 47.2%;
+    top: 191px;
+    left: 47%;
     z-index: 40;
 }
 
-
+/*
 .iphone__responsive {
     width: 21%;
 }
@@ -203,7 +203,7 @@ z-index: 10;
 .layer__responsive_horizontal img{
     width: 100%;
 }
-
+*/
 .slide {
     width: 100%;
 }
@@ -658,44 +658,64 @@ z-index: 10;
     }
 }
 
-
-@media (min-width: 375px) and (max-width: 768px) {
-    .header {
-        height: 87px;
-    }
-    
-    .slider__height {
+@media (max-width: 1020px) {
+    .slider__hight {
         height: 451px;
-        
     }
-    .services {
-        height: 668px;
+
+    .slider__iphone {
+        top: 41px;
+        left: 11%;
+        width: 162px;
+      }
+      .slider__iphone img {
+          width: 100%
+      }
+      .slider__shadow {
+        top: 40px;
+        left: 11%;
+        width: 180px;
+      }
+      .slider__shadow img {
+        width: 100%
     }
-    
-    .layout-3-columns .card {
-    flex: 1 0 35%;
+      .slider__layer {
+          top: 90px;
+          left: 12.1%;
+          width: 144px;
+      }
+      .slider__layer img {
+        width: 100%
     }
-    .portfolio {
-        height: 1094.4px; 
+      .slider__iphone_horizontal {
+          top: 41px;
+          left: 56%;
+          width: 162px;
+        }
+        .slider__iphone_horizontal img {
+            width: 100%
+        }
+        .slider__shadow_horizontal {
+          top: 41px;
+         left: 56.2%; 
+         width: 180px;
+      }
+      .slider__shadow_horizontal img {
+        width: 100%
     }
-    
-    .portfolio__pictures li {
-        flex: 1 0 24%;
-       }
-    .about-us {   
-        height:662px;
+      .slider__layer_horizontal {
+          top: 144px;
+          left: 50.2%;
+          width: 253px;
+      }
+      .slider__layer_horizontal img {
+        width: 100%
     }
-    .quote {  
-        height:625.71px;
-    }
-    .footer {  
-         height: 76px;
-     }
-    
+   
 }
 
 
-@media  (max-width: 375px) {
+@media (max-width: 768px) {
     .header {
         height: 71px;
     }
@@ -749,10 +769,97 @@ z-index: 10;
         padding-top: 20px;
     }
      
-     .slider__height {
-         height: 220px;
-         
+    .slider__hight {
+        height: 220px;
+    }
+    .slider__iphone {
+        top: 20px;
+        left: 11%;
+        width: 79px;
+      }
+      .slider__iphone img {
+          width: 100%
+      }
+      .slider__shadow {
+        top: 20px;
+        left: 11%;
+        width: 88px;
+      }
+      .slider__shadow img {
+        width: 100%
+    }
+      .slider__layer {
+          top: 44px;
+          left: 12.3%;
+          width: 69px;
+      }
+      .slider__layer img {
+        width: 100%
+    }
+      .slider__iphone_horizontal {
+          top: 18px;
+          left: 55.3%;
+          width: 79px;
+        }
+        .slider__iphone_horizontal img {
+            width: 100%
+        }
+        .slider__shadow_horizontal {
+          top: 18px;
+         left: 56.2%; 
+         width: 90px;
+      }
+      .slider__shadow_horizontal img {
+        width: 100%
+    }
+      .slider__layer_horizontal {
+          top: 70px;
+          left: 49.8%;
+          width: 122px;
+      }
+      .slider__layer_horizontal img {
+        width: 100%
+    }
+    .slider__arrow.left {
+        left: 3%;
+    }
+    
+    .slider__arrow.right {
+        right: 3%;
+    }
+
+
+
+
+
+    .services {
+        height: 668px;
+    }
+    
+    .layout-3-columns .card {
+    flex: 1 0 35%;
+    }
+    .portfolio {
+        height: 1094.4px; 
+    }
+    
+    .portfolio__pictures li {
+        flex: 1 0 24%;
+       }
+    .about-us {   
+        height:662px;
+    }
+    .quote {  
+        height:625.71px;
+    }
+    .footer {  
+         height: 76px;
      }
+    
+}
+
+
+@media  (max-width: 375px) {
      .container {
          padding: 0 30px 0 30px;
      }
