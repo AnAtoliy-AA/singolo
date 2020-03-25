@@ -20,12 +20,25 @@ function onScroll(event) {
   });
 }
 
+// RESPONSIVE NAVBAR
+//const responsiveNavigatioinMenuIconActive = document.querySelector('.responsive__menu__icon_active');
+const responsiveNavigatioinMenuIcon = document.querySelector('.responsive__menu__icon');
+const responsiveNavigatioinMenu = document.querySelector('.navigation__menu');
+const responsiveNavigatioin = document.querySelector('.navigation');
+responsiveNavigatioinMenuIcon.addEventListener('click', () => { 
+  responsiveNavigatioinMenuIcon.classList.toggle("responsive__menu__icon_active");
+  responsiveNavigatioinMenu.classList.toggle("navigation__menu_active");
+  responsiveNavigatioin.classList.toggle("responsive__navigation");
+});
+
 //ANCHOR ANIMATION
 
 const anchors = document.querySelectorAll('.navigation__item');
 anchors.forEach((anchor) => {
   anchor.addEventListener('click', function (event) {
     event.preventDefault();
+    responsiveNavigatioinMenu.classList.toggle("navigation__menu_active");
+  responsiveNavigatioin.classList.toggle("responsive__navigation");
     const anchorBlock = anchor.getAttribute('href').substring(1);
     document.getElementById(anchorBlock).scrollIntoView({
       behavior: 'smooth',
@@ -86,17 +99,21 @@ arrowRight.addEventListener('click', function () {
 
 //iPHONE SCREEN
 
-const iphoneScreenIsON = document.querySelector('.iphone__screen_left');
-const iphoneScreenIsOFF = document.querySelector('.iphone__screen_left>img');
-
-iphoneScreenIsON.addEventListener('click', () => {
-  iphoneScreenIsOFF.classList.toggle("hidden");
+const iphoneLeftScreen = document.querySelector('.iphone__screen_left');
+iphoneLeftScreen.addEventListener('click', () => {
+  iphoneLeftScreen.classList.toggle("hidden");
 });
-const iphoneRightScreenIsON = document.querySelector('.iphone__screen_right');
-const iphoneRightScreenIsOFF = document.querySelector('.iphone__screen_right>img');
-
-iphoneRightScreenIsON.addEventListener('click', () => {
-  iphoneRightScreenIsOFF.classList.toggle("hidden");
+const iphoneScreenIsOff = document.querySelector('.slider__iphone');
+iphoneScreenIsOff.addEventListener('click', () => {
+  iphoneLeftScreen.classList.toggle("hidden");
+});
+const iphoneRightScreen = document.querySelector('.iphone__screen_right');
+iphoneRightScreen.addEventListener('click', () => {
+  iphoneRightScreen.classList.toggle("hidden");
+});
+const iphoneRightScreenIsOff = document.querySelector('.slider__iphone_horizontal');
+iphoneRightScreenIsOff.addEventListener('click', () => {
+  iphoneRightScreen.classList.toggle("hidden");
 });
 
   //PORTFOLIO PICTURES
@@ -137,10 +154,12 @@ const filterPicturesBySelectedButton = (list) => {
 //RED BORDER PORTFOLIO PICTURES
 
 portfolioPictures.addEventListener('click', (event) => {
+  if (event.target.tagName === 'IMG') {
   portfolioPictures.querySelectorAll('img').forEach(el => {
-    el.classList.remove('img__selected')
+    el.classList.remove('img__selected');
   });
   event.target.classList.add('img__selected');
+}
 });
 
 //SUBMIT FORM
