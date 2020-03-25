@@ -96,6 +96,14 @@
     color: blue;
 } 
  
+.page__overlay{
+    background: #2D303A;
+    opacity: 0.6;
+  /*  left: 278px;*/
+    width: calc(100vw - 278px);
+    height: 100vh;
+    z-index: 90;
+}
 .slider {
     border-top: 95px solid transparent;
     margin-top: -95px;
@@ -134,76 +142,64 @@ z-index: 10;
     right: 5%;
 }
 
-
+.iphone__one {
+    position: absolute;
+    max-width: 216px;
+    height: auto;
+    margin-top: 4%;
+    margin-left: 11%;
+    width: 46%;
+}
 .slider__iphone {
   position: absolute;
-  top: 54px;
-  left: 11%;
   z-index: 30;
+  width: 100%;
 }
 .slider__shadow {
   position: absolute;
-  top: 54px;
-  left: 11%;
   z-index: 20;
+  width: 113%;
 }
-.slider__layer {
+.slider__screen {
     position: absolute;
-    top: 119px;
-    left: 12%;
+    top: 62px;
+    left: 3%;
     z-index: 40;
+    width: 91%;
+}
+
+.iphone__two {
+    position: absolute;
+    max-width: 459px;
+    height: auto;
+    margin-top: 9%;
+    margin-left: 53%;
+    width: 46%;
 }
 
 .slider__iphone_horizontal {
     position: absolute;
     -webkit-transform: rotate(90deg);
-        -ms-transform: rotate(90deg);
-            transform: rotate(90deg);
-    top: 57px;
-    left: 53%;
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    width: 47%;
     z-index: 30;
   }
   .slider__shadow_horizontal {
     position: absolute;
     -webkit-transform: rotateY(180deg) rotateZ(90deg);
-            transform: rotateY(180deg) rotateZ(90deg);
-    top: 57px;
-   left: 54%;
-    z-index: 20;  
+    transform: rotateY(180deg) rotateZ(90deg);
+    width: 52%;
+    z-index: 20; 
 }
-.slider__layer_horizontal {
+.slider__screen_horizontal {
     position: absolute;
-    top: 191px;
-    left: 47%;
-    z-index: 40;
+    top: 131px;
+    left: -66px;
+    width: 75%;
+    z-index: 40
 }
 
-/*
-.iphone__responsive {
-    width: 21%;
-}
-.iphone__responsive img{
-    width: 100%;
-}
-.shadow__responsive {
-    width: 23.5%;
-}
-.shadow__responsive img{
-    width: 100%;
-}
-.layer__responsive_vertical {
-    width: 18.7%;
-}
-.layer__responsive_vertical img{
-    width: 100%;
-}
-.layer__responsive_horizontal {
-    width: 32.7%;
-}
-.layer__responsive_horizontal img{
-    width: 100%;
-}
-*/
 .slide {
     width: 100%;
 }
@@ -672,10 +668,31 @@ color: #886A30;
 }
 
 @media (max-width: 1019px) {
-    
+
     .slider__hight {
         height: 451px;
     }
+    .iphone__one {
+        max-width: 162px;
+    }
+    .slider__screen {
+        top: 48px;
+    }
+    .iphone__two {
+        max-width: 344px;
+        margin-top: 5%;
+    }
+    .slider__screen_horizontal {
+        top: 101px;
+        left: -54px;
+    }
+
+
+    /*   
+
+
+    
+    
 
     .slider__iphone {
         top: 41px;
@@ -693,15 +710,15 @@ color: #886A30;
       .slider__shadow img {
         width: 100%
     }
-      .slider__layer {
+      .slider__screen {
           top: 90px;
           left: 12.1%;
-          width: 144px;
+          width: 100%;
       }
-      .slider__layer img {
+      .slider__screen img {
         width: 100%
-    }
-      .slider__iphone_horizontal {
+    } */
+      /* .slider__iphone_horizontal {
           top: 41px;
           left: 56%;
           width: 162px;
@@ -717,15 +734,15 @@ color: #886A30;
       .slider__shadow_horizontal img {
         width: 100%
     }
-      .slider__layer_horizontal {
+      .slider__screen_horizontal {
           top: 144px;
           left: 50.2%;
           width: 253px;
       }
-      .slider__layer_horizontal img {
+      .slider__screen_horizontal img {
         width: 100%
     }
-   
+    */
 
    .services {
     height: 668px;
@@ -795,6 +812,7 @@ flex: 1 0 35%;
         width: 278px;
         height: 100vh;
         background: #2D303A;
+        transition: background-color 0.35s;
     }
     .responsive__navigation{
         display: flex;
@@ -817,54 +835,53 @@ flex: 1 0 35%;
     .slider__hight {
         height: 220px;
     }
+
+
+    .iphone__one {
+        max-width: 79px;
+        margin-top: 4%;
+    }
+    .slider__screen {
+        top: 22px;
+    }
+    .iphone__two {
+        max-width: 168px;
+        margin-top: 4%;
+    }
+    .slider__screen_horizontal {
+        top: 49px;
+        left: -25px;
+    }
+
+/*
+    .iphone__one {
+        top: 54px;
+        left: 11%;
+        width: 46%;
+    }
     .slider__iphone {
-        top: 20px;
-        left: 11%;
-        width: 79px;
-      }
-      .slider__iphone img {
-          width: 100%
-      }
-      .slider__shadow {
-        top: 20px;
-        left: 11%;
-        width: 88px;
-      }
-      .slider__shadow img {
-        width: 100%
+      width: 46%;
     }
-      .slider__layer {
-          top: 44px;
-          left: 12.3%;
-          width: 69px;
-      }
-      .slider__layer img {
-        width: 100%
+    .slider__shadow {
+      width: 46%;
     }
-      .slider__iphone_horizontal {
-          top: 18px;
-          left: 55.3%;
-          width: 79px;
-        }
-        .slider__iphone_horizontal img {
-            width: 100%
-        }
-        .slider__shadow_horizontal {
-          top: 18px;
-         left: 56.2%; 
-         width: 90px;
-      }
-      .slider__shadow_horizontal img {
-        width: 100%
+    .slider__screen {
+        width: 42%;
     }
-      .slider__layer_horizontal {
-          top: 70px;
-          left: 49.8%;
-          width: 122px;
-      }
-      .slider__layer_horizontal img {
-        width: 100%
+    .iphone__two {
+        width: 46%;
     }
+    .slider__iphone_horizontal {
+        width: 47%;
+      }
+      .slider__shadow_horizontal {
+        width: 52%;
+    }
+    .slider__screen_horizontal {
+        width: 75%;
+    }
+     */
+
     .slider__arrow.left {
         left: 3%;
     }
@@ -944,7 +961,7 @@ flex: 1 0 35%;
          display: none;
      }
      .footer__networks {
-       margin: 6% 21%;
+       margin: 2% 21%;
      }
 }
 
@@ -953,6 +970,22 @@ flex: 1 0 35%;
     .services {
         height: auto;
     }
+   
+    .iphone__one {
+        max-width: 67px;
+        margin-top: 12%;
+    }
+    .slider__screen {
+        top: 20px;
+    }
+    .iphone__two {
+        max-width: 144px;
+        margin-top: 12%;
+    }
+    .slider__screen_horizontal {
+        top: 41px;
+        left: -20px;
+    }
     .about__card {
         min-width: 210px;
     }
@@ -960,3 +993,18 @@ flex: 1 0 35%;
         height: 620px;
     }
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

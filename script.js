@@ -99,28 +99,23 @@ arrowRight.addEventListener('click', function () {
 
 //iPHONE SCREEN
 
-const iphoneScreenIsON = document.querySelector('.iphone__screen_left');
-const iphoneScreen = document.querySelector('.iphone__screen_left>img');
-
-iphoneScreenIsON.addEventListener('click', () => {
-  iphoneScreen.classList.toggle("hidden");
+const iphoneLeftScreen = document.querySelector('.iphone__screen_left');
+iphoneLeftScreen.addEventListener('click', () => {
+  iphoneLeftScreen.classList.toggle("hidden");
 });
-
 const iphoneScreenIsOff = document.querySelector('.slider__iphone');
 iphoneScreenIsOff.addEventListener('click', () => {
-  iphoneScreen.classList.toggle("hidden");
+  iphoneLeftScreen.classList.toggle("hidden");
 });
-const iphoneRightScreenIsON = document.querySelector('.iphone__screen_right');
-const iphoneRightScreen = document.querySelector('.iphone__screen_right>img');
-
-iphoneRightScreenIsON.addEventListener('click', () => {
+const iphoneRightScreen = document.querySelector('.iphone__screen_right');
+iphoneRightScreen.addEventListener('click', () => {
   iphoneRightScreen.classList.toggle("hidden");
 });
-
 const iphoneRightScreenIsOff = document.querySelector('.slider__iphone_horizontal');
 iphoneRightScreenIsOff.addEventListener('click', () => {
   iphoneRightScreen.classList.toggle("hidden");
 });
+
   //PORTFOLIO PICTURES
 
   window.onload = function () {
@@ -159,10 +154,12 @@ const filterPicturesBySelectedButton = (list) => {
 //RED BORDER PORTFOLIO PICTURES
 
 portfolioPictures.addEventListener('click', (event) => {
+  if (event.target.tagName === 'IMG') {
   portfolioPictures.querySelectorAll('img').forEach(el => {
-    el.classList.remove('img__selected')
+    el.classList.remove('img__selected');
   });
   event.target.classList.add('img__selected');
+}
 });
 
 //SUBMIT FORM
