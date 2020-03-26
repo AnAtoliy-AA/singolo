@@ -25,10 +25,13 @@ function onScroll(event) {
 const responsiveNavigatioinMenuIcon = document.querySelector('.responsive__menu__icon');
 const responsiveNavigatioinMenu = document.querySelector('.navigation__menu');
 const responsiveNavigatioin = document.querySelector('.navigation');
-responsiveNavigatioinMenuIcon.addEventListener('click', () => { 
-  responsiveNavigatioinMenuIcon.classList.toggle("responsive__menu__icon_active");
-  responsiveNavigatioinMenu.classList.toggle("navigation__menu_active");
-  responsiveNavigatioin.classList.toggle("responsive__navigation");
+const responsiveNavigationOverlay = document.querySelector('.page__overlay');
+responsiveNavigatioinMenuIcon.addEventListener('click', () => {
+  responsiveNavigationOverlay.classList.toggle
+  responsiveNavigatioinMenuIcon.classList.toggle('responsive__menu__icon_active');
+  responsiveNavigatioinMenu.classList.toggle('navigation__menu_active');
+  responsiveNavigatioin.classList.toggle('responsive__navigation');
+  responsiveNavigationOverlay.classList.toggle('hidden');
 });
 
 //ANCHOR ANIMATION
@@ -37,8 +40,10 @@ const anchors = document.querySelectorAll('.navigation__item');
 anchors.forEach((anchor) => {
   anchor.addEventListener('click', function (event) {
     event.preventDefault();
-    responsiveNavigatioinMenu.classList.toggle("navigation__menu_active");
-  responsiveNavigatioin.classList.toggle("responsive__navigation");
+    event.target.classList.add('navigation__item_selected');
+    responsiveNavigatioinMenu.classList.remove('navigation__menu_active');
+    responsiveNavigatioin.classList.remove('responsive__navigation');
+    responsiveNavigationOverlay.classList.add('hidden');
     const anchorBlock = anchor.getAttribute('href').substring(1);
     document.getElementById(anchorBlock).scrollIntoView({
       behavior: 'smooth',
@@ -52,6 +57,7 @@ anchors.forEach((anchor) => {
 const carouselItems = document.querySelectorAll('.carousel__item');
 const arrowLeft = document.querySelector('.slider__arrow.left');
 const arrowRight = document.querySelector('.slider__arrow.right');
+const slider = document.querySelector('.slider');
 let activeItem = 0;
 let isEnabled = true;
 
@@ -80,9 +86,11 @@ function nextItem(n) {
   changeActiveItem(n - 1);
   showItem('animation__from-left');
 }
+
 arrowLeft.addEventListener('click', function () {
   if (isEnabled) {
     previousItem(activeItem);
+    slider.classList.toggle('change__colour');
   }
 });
 
@@ -94,6 +102,7 @@ function previousItem(n) {
 arrowRight.addEventListener('click', function () {
   if (isEnabled) {
     nextItem(activeItem);
+    slider.classList.toggle('change__colour');
   }
 });
 
@@ -116,15 +125,15 @@ iphoneRightScreenIsOff.addEventListener('click', () => {
   iphoneRightScreen.classList.toggle("hidden");
 });
 
-  //PORTFOLIO PICTURES
+//PORTFOLIO PICTURES
 
-  window.onload = function () {
-    addButtonsClickHandler();
-  }
-  const portfolioPictures = document.querySelector('.portfolio__pictures');
-  const portfolioButtons = document.querySelector('.portfolio__buttons');
-  const addButtonsClickHandler = () => {
-    portfolioButtons.addEventListener('click', (e) => {
+window.onload = function () {
+  addButtonsClickHandler();
+}
+const portfolioPictures = document.querySelector('.portfolio__pictures');
+const portfolioButtons = document.querySelector('.portfolio__buttons');
+const addButtonsClickHandler = () => {
+  portfolioButtons.addEventListener('click', (e) => {
     if (e.target.classList.contains('button')) {
       let clickedButton = e.target;
       removeSelectedButtons();
@@ -155,11 +164,11 @@ const filterPicturesBySelectedButton = (list) => {
 
 portfolioPictures.addEventListener('click', (event) => {
   if (event.target.tagName === 'IMG') {
-  portfolioPictures.querySelectorAll('img').forEach(el => {
-    el.classList.remove('img__selected');
-  });
-  event.target.classList.add('img__selected');
-}
+    portfolioPictures.querySelectorAll('img').forEach(el => {
+      el.classList.remove('img__selected');
+    });
+    event.target.classList.add('img__selected');
+  }
 });
 
 //SUBMIT FORM
