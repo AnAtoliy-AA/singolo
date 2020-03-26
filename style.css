@@ -27,15 +27,18 @@
     text-decoration: none;
     padding-top: 29px;
     padding-left: 40px;
+    z-index: 100;
     color:#ffffff;
 }
 .header__logo-star {
     color: #f06c64;
 }
+
 .responsive__menu__icon {
     display: none;
     width: 25px;
     height: 20px;
+    z-index: 100;
     cursor: pointer;
 }
 
@@ -91,17 +94,20 @@
 .navigation__item_selected {
     color: #f06c64;
 }
+
 .navigation__item:hover {
     cursor:pointer;
-    color: blue;
 } 
  
 .page__overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     background: #2D303A;
     opacity: 0.6;
-  /*  left: 278px;*/
-    width: calc(100vw - 278px);
-    height: 100vh;
+    transition: background-color 0.4s;
     z-index: 90;
 }
 .slider {
@@ -109,18 +115,15 @@
     margin-top: -95px;
     background-clip:content-box;
     position: relative;
-    background-color:#f06c64;
+    background-color: #f06c64;
     z-index: 10;
 }
-
-.slider__hight {
-    height: 594px;
+.change__colour {
+    background-color: #ffffff;
+    transition: 0.8s;
 }
-.slider__background{
-background-color:#f06c64;
-border-bottom: 6px solid #ea676b;
-width: 100%;
-z-index: 10;
+.slider__hight {
+    height: 598px;
 }
 
 .slider__arrow{
@@ -176,6 +179,7 @@ z-index: 10;
     margin-left: 53%;
     width: 46%;
 }
+
 
 .slider__iphone_horizontal {
     position: absolute;
@@ -674,87 +678,41 @@ color: #886A30;
     }
     .iphone__one {
         max-width: 162px;
+        margin-top: 5.5%;
     }
     .slider__screen {
         top: 48px;
     }
     .iphone__two {
         max-width: 344px;
-        margin-top: 5%;
+        margin-top: 6%;
     }
     .slider__screen_horizontal {
         top: 101px;
         left: -54px;
     }
 
-
-    /*   
-
-
-    
-    
-
-    .slider__iphone {
-        top: 41px;
-        left: 11%;
-        width: 162px;
-      }
-      .slider__iphone img {
-          width: 100%
-      }
-      .slider__shadow {
-        top: 40px;
-        left: 11%;
-        width: 180px;
-      }
-      .slider__shadow img {
-        width: 100%
+    .slide {
+        height: 452px;
     }
-      .slider__screen {
-          top: 90px;
-          left: 12.1%;
-          width: 100%;
-      }
-      .slider__screen img {
-        width: 100%
-    } */
-      /* .slider__iphone_horizontal {
-          top: 41px;
-          left: 56%;
-          width: 162px;
-        }
-        .slider__iphone_horizontal img {
-            width: 100%
-        }
-        .slider__shadow_horizontal {
-          top: 41px;
-         left: 56.2%; 
-         width: 180px;
-      }
-      .slider__shadow_horizontal img {
-        width: 100%
-    }
-      .slider__screen_horizontal {
-          top: 144px;
-          left: 50.2%;
-          width: 253px;
-      }
-      .slider__screen_horizontal img {
-        width: 100%
-    }
-    */
 
    .services {
     height: 668px;
 }
-
+.section__description {
+    padding-top: 54px;
+}
+.card__container {
+    margin-top: 34px;
+    padding: 0px 30px 0 22px;
+}
 .layout-3-columns .card {
 flex: 1 0 35%;
+padding-top: 20px;
 }
 .portfolio {
     height: 1102px; 
 }
-
 .portfolio__pictures li {
     flex: 1 0 23%;
     max-height: 207px;
@@ -763,8 +721,12 @@ flex: 1 0 35%;
     height:728px;
 }
 
+.networks {
+    width: 67%;
+}
 .quote {  
     height:631px;
+    padding-top: 38px
 }
 
 .contact {
@@ -775,11 +737,17 @@ flex: 1 0 35%;
 .footer {  
      height: 76px;
  }
-
+ .footer__networks {
+   
+    width: 23%;
+}
 }
 
 
 @media (max-width: 767px) {
+    .header {
+        height: 65px;
+    }
       
     .responsive__menu__icon {
         display: inline-block;
@@ -811,6 +779,7 @@ flex: 1 0 35%;
     .navigation__menu_active {
         width: 278px;
         height: 100vh;
+        z-index: 100;
         background: #2D303A;
         transition: background-color 0.35s;
     }
@@ -820,6 +789,7 @@ flex: 1 0 35%;
         justify-content: space-between;
         height: 260px;
         top: 232px;
+        z-index: 100;
     }
     .navigation__item {
         font-size: 24px;
@@ -830,12 +800,17 @@ flex: 1 0 35%;
     .header__logo {
         text-align: center;
         padding-top: 20px;
+        font-size: 19px;
+        z-index: 100;
     }
      
     .slider__hight {
         height: 220px;
     }
 
+    .slide {
+        height: 220px;
+    }
 
     .iphone__one {
         max-width: 79px;
@@ -853,34 +828,6 @@ flex: 1 0 35%;
         left: -25px;
     }
 
-/*
-    .iphone__one {
-        top: 54px;
-        left: 11%;
-        width: 46%;
-    }
-    .slider__iphone {
-      width: 46%;
-    }
-    .slider__shadow {
-      width: 46%;
-    }
-    .slider__screen {
-        width: 42%;
-    }
-    .iphone__two {
-        width: 46%;
-    }
-    .slider__iphone_horizontal {
-        width: 47%;
-      }
-      .slider__shadow_horizontal {
-        width: 52%;
-    }
-    .slider__screen_horizontal {
-        width: 75%;
-    }
-     */
 
     .slider__arrow.left {
         left: 3%;
@@ -897,15 +844,20 @@ flex: 1 0 35%;
     }
     .layout-3-columns .card {
        flex: 1 0 51%;
+       padding-top: 0px;
        }
+       .card__name {
+        padding-top: 0;
+       }
+       .card__logo {
+           padding-top: 0;
+       }
+       
     .portfolio {
        height: auto;
+       border-top: 55px;
+       padding-top: 0;
     }
-    .portfolio__pictures {
-       height: 83%;
-       overflow: hidden;        
-   }
-
     .portfolio__pictures li {
        flex: 1 0 31%;
       }
@@ -924,9 +876,6 @@ flex: 1 0 35%;
     .about-us {   
         height:auto;
     }
-    .about__container {
-        
-    }
     .about__card {
         min-width: 291px;
        flex: 0 0 51%;
@@ -939,6 +888,7 @@ flex: 1 0 35%;
 
     .quote {  
         height:auto;
+        padding-top: 94px;
     }
     .contact {
         height: 602px;
@@ -955,14 +905,21 @@ flex: 1 0 35%;
         height: 50px;
     }
     .footer {  
-         height: 76px;
+         height: 53px;
      }
      .copyright {
          display: none;
      }
      .footer__networks {
-       margin: 2% 21%;
+       margin: 0% 30%;
      }
+     .networks img {
+        padding-top: 0;
+        padding-right: 0;
+    }
+     .footer__networks {
+        width: 53%;
+    }
 }
 
 
@@ -986,11 +943,18 @@ flex: 1 0 35%;
         top: 41px;
         left: -20px;
     }
+    .portfolio {
+        padding-top: 55px;
+        border-top: 0;
+    }
     .about__card {
         min-width: 210px;
     }
     .contact {
         height: 620px;
+    }
+    .footer__networks {
+        margin: 0% 23%;
     }
  }
 
