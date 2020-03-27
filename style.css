@@ -674,7 +674,7 @@ color: #886A30;
 @media (max-width: 1019px) {
 
     .slider__hight {
-        height: 451px;
+        height: 456px;
     }
     .iphone__one {
         max-width: 162px;
@@ -748,7 +748,9 @@ padding-top: 20px;
     .header {
         height: 65px;
     }
-      
+    .container {
+        padding: 0 30px 0 30px;
+    }
     .responsive__menu__icon {
         display: inline-block;
         position: absolute;
@@ -805,7 +807,7 @@ padding-top: 20px;
     }
      
     .slider__hight {
-        height: 220px;
+        height: 224px;
     }
 
     .slide {
@@ -852,11 +854,16 @@ padding-top: 20px;
        .card__logo {
            padding-top: 0;
        }
-       
+       .card__text {
+        font-size: 12.1px;
+       }
     .portfolio {
        height: auto;
        border-top: 55px;
        padding-top: 0;
+    }
+    .portfolio__pictures{
+        padding: 0 20px 0 20px;
     }
     .portfolio__pictures li {
        flex: 1 0 31%;
@@ -876,11 +883,17 @@ padding-top: 20px;
     .about-us {   
         height:auto;
     }
+
+    .about__container {
+        justify-content: center;
+    }
     .about__card {
-        min-width: 291px;
+        min-width: 315px;
        flex: 0 0 51%;
-       
    }
+   .about__picture {
+    width: 100%;
+}
    
    .card__description {
        width: auto;
@@ -911,7 +924,7 @@ padding-top: 20px;
          display: none;
      }
      .footer__networks {
-       margin: 0% 30%;
+       margin: 2% 30%;
      }
      .networks img {
         padding-top: 0;
@@ -947,14 +960,18 @@ padding-top: 20px;
         padding-top: 55px;
         border-top: 0;
     }
+    .button {
+        font-size: 11px;
+        margin: 11px 0px 10px 0px;
+    }
     .about__card {
-        min-width: 210px;
+        min-width: 260px;
     }
     .contact {
         height: 620px;
     }
     .footer__networks {
-        margin: 0% 23%;
+        margin: 3% 23%;
     }
  }
 

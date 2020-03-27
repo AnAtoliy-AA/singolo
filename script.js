@@ -41,6 +41,7 @@ anchors.forEach((anchor) => {
   anchor.addEventListener('click', function (event) {
     event.preventDefault();
     event.target.classList.add('navigation__item_selected');
+    responsiveNavigatioinMenuIcon.classList.remove('responsive__menu__icon_active');
     responsiveNavigatioinMenu.classList.remove('navigation__menu_active');
     responsiveNavigatioin.classList.remove('responsive__navigation');
     responsiveNavigationOverlay.classList.add('hidden');
