@@ -259,12 +259,12 @@
                     <div class="contact">
                         <form id="contact-form" class="contact__form">
                             <input type="text" id="quote_name" class="contact__input"
-                                pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$" required
+                                pattern="[A-Z]{1}[a-z]{1,14} [A-Z]{1}[a-z]{1,14}$" required title="Jhon Smith"
                                 placeholder="Name (Required)">
                             <input type="email" id="quote_email" class="contact__input" required
                                 placeholder="Email (Required)">
-                            <input type="text" id="subject" class="contact__input" placeholder="Subject">
-                            <textarea id="describe" class="contact__input input_changed"
+                            <input type="text" id="subject" class="contact__input" placeholder="Subject"  maxlength="100">
+                            <textarea id="describe" class="contact__input input_changed"  maxlength="300"
                                 placeholder="Describe your project in detail..."></textarea>
                             <button type="submit" id="btn" class="button button__selected">Send</button>
                         </form>

@@ -588,6 +588,12 @@ color: #886A30;
     z-index: 100;
 }
 
+.describe {
+    word-wrap: break-word;
+}
+.subject {
+    word-wrap: break-word;
+}
 @font-face {
     font-family: Lato-Black;
     src: url('./assets/Lato-Black.ttf') format("truetype");
